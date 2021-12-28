@@ -1,102 +1,200 @@
+const myName = [];
+
 function generateScreenshot(data) {
-  const imgArr = []
-  data.forEach( image => {
-    imgArr.push(image)
-  })
+  const imgArr = [];
+  data.forEach((image) => {
+    imgArr.push(image);
+  });
   return imgArr;
 }
 
+function year() {
+  return new Date().getFullYear();
+}
 
 // TODO: Create a function that returns a license badge based on which license is passed in
 function renderLicenseBadge(license) {
   if (license === "Apache License 2.0") {
     return `[![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
-    `
-  }
-  else if (license === "GNU GPLv3") {
+    `;
+  } else if (license === "GNU GPLv3") {
     return `[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
-    `
-  }
-  else if (license === "GNU AGPLv3") {
+    `;
+  } else if (license === "GNU AGPLv3") {
     return `[![License: AGPL v3](https://img.shields.io/badge/License-AGPL_v3-blue.svg)](https://www.gnu.org/licenses/agpl-3.0)
-    `
-  }
-  else if (license === "GNU LGPLv3") {
-    return `[![License: LGPL v3](https://img.shields.io/badge/License-LGPL_v3-blue.svg)](https://www.gnu.org/licenses/lgpl-3.0)
-    `
-  }
-  else if (license === "MIT") {
+    `;
+  } else if (license === "MIT") {
     return `[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-    `
-  }
-  else if (license === "ISC") {
+    `;
+  } else if (license === "ISC") {
     return `[![License: ISC](https://img.shields.io/badge/License-ISC-blue.svg)](https://opensource.org/licenses/ISC)
-    `
-  }
-  else if (license === "Mozilla Public License 2.0") {
+    `;
+  } else if (license === "Mozilla Public License 2.0") {
     return `[![License: MPL 2.0](https://img.shields.io/badge/License-MPL_2.0-brightgreen.svg)](https://opensource.org/licenses/MPL-2.0)
-    `
-  }
-  else if (license === "Boost Software License 1.0") {
+    `;
+  } else if (license === "Boost Software License 1.0") {
     return `[![License](https://img.shields.io/badge/License-Boost_1.0-lightblue.svg)](https://www.boost.org/LICENSE_1_0.txt)
-    `
-  }
-  else if (license === "The Unlicense") {
+    `;
+  } else if (license === "The Unlicense") {
     return `[![License: Unlicense](https://img.shields.io/badge/license-Unlicense-blue.svg)](http://unlicense.org/)
-    `
+    `;
   }
 }
 
 function renderLicenseSection(license) {
-if (license === "Apache License 2.0") {
-  return `
-  A permissive license whose main conditions require preservation of copyright and license notices. Contributors provide an express grant of patent rights. Licensed works, modifications, and larger works may be distributed under different terms and without source code.
-  `
-}
-else if (license === "GNU GPLv3") {
-  return `
-  Permissions of this strong copyleft license are conditioned on making available complete source code of licensed works and modifications, which include larger works using a licensed work, under the same license. Copyright and license notices must be preserved. Contributors provide an express grant of patent rights.
-  `
-}
-else if (license === "GNU AGPLv3") {
-  return `
-  Permissions of this strongest copyleft license are conditioned on making available complete source code of licensed works and modifications, which include larger works using a licensed work, under the same license. Copyright and license notices must be preserved. Contributors provide an express grant of patent rights. When a modified version is used to provide a service over a network, the complete source code of the modified version must be made available.
-  `
-}
-else if (license === "GNU LGPLv3") {
-  return `
-  Permissions of this copyleft license are conditioned on making available complete source code of licensed works and modifications under the same license or the GNU GPLv3. Copyright and license notices must be preserved. Contributors provide an express grant of patent rights. However, a larger work using the licensed work through interfaces provided by the licensed work may be distributed under different terms and without source code for the larger work.
-  `
-}
-else if (license === "MIT") {
-  return `
-  A short and simple permissive license with conditions only requiring preservation of copyright and license notices. Licensed works, modifications, and larger works may be distributed under different terms and without source code.
-  `
-}
-else if (license === "ISC") {
-  return `
-  A permissive license lets people do anything with your code with proper attribution and without warranty. The ISC license is functionally equivalent to the BSD 2-Clause and MIT licenses, removing some language that is no longer necessary.
-  `
-}
-else if (license === "Mozilla Public License 2.0") {
-  return `
-  Permissions of this weak copyleft license are conditioned on making available source code of licensed files and modifications of those files under the same license (or in certain cases, one of the GNU licenses). Copyright and license notices must be preserved. Contributors provide an express grant of patent rights. However, a larger work using the licensed work may be distributed under different terms and without source code for files added in the larger work.
-  `
-}
-else if (license === "Boost Software License 1.0") {
-  return `
-  A simple permissive license only requiring preservation of copyright and license notices for source (and not binary) distribution. Licensed works, modifications, and larger works may be distributed under different terms and without source code.
-  `
-}
-else if (license === "The Unlicense") {
-  return `
-  A license with no conditions whatsoever which dedicates works to the public domain. Unlicensed works, modifications, and larger works may be distributed under different terms and without source code.
-  `
-}
+  if (license === "Apache License 2.0") {
+    return `
+  Copyright ©${year()} ${myName} 
+
+  Licensed under the Apache License, Version 2.0 (the "License");
+  you may not use this file except in compliance with the License.
+  You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License.
+  `;
+  } else if (license === "GNU GPLv3") {
+    return `
+    Copyright ©${year()} ${myName} 
+
+    This program is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with this program.  If not, see <https://www.gnu.org/licenses/>.
+  `;
+  } else if (license === "GNU AGPLv3") {
+    return `
+    Copyright ©${year()} ${myName} 
+
+    This program is free software: you can redistribute it and/or modify
+    it under the terms of the GNU Affero General Public License as
+    published by the Free Software Foundation, either version 3 of the
+    License, or (at your option) any later version.
+
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU Affero General Public License for more details.
+
+    You should have received a copy of the GNU Affero General Public License
+    along with this program.  If not, see <https://www.gnu.org/licenses/>.
+  `;
+  } else if (license === "MIT") {
+    return `
+    Copyright ©${year()} ${myName} 
+
+    Permission is hereby granted, free of charge, to any person obtaining a 
+    copy of this software and associated documentation files (the "Software"),
+    to deal in the Software without restriction, including without limitation
+    the rights to use, copy, modify, merge, publish, distribute, sublicense,
+    and/or sell copies of the Software, and to permit persons to whom the
+    Software is furnished to do so, subject to the following conditions:
+    
+    The above copyright notice and this permission notice shall be included in
+     all copies or substantial portions of the Software.
+    
+    THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+    IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, 
+    FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL 
+    THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+    LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING 
+    FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER 
+    DEALINGS IN THE SOFTWARE.
+  `;
+  } else if (license === "ISC") {
+    return `
+    Copyright ©${year()} ${myName} 
+
+    Permission to use, copy, modify, and/or distribute this software for any
+    purpose with or without fee is hereby granted, provided that the above 
+    copyright notice and this permission notice appear in all copies.
+
+    THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES 
+    WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF 
+    MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR 
+    ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES 
+    WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN 
+    ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF
+     OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
+    `;
+  } else if (license === "Mozilla Public License 2.0") {
+    return `
+    This Source Code Form is subject to the terms of the Mozilla Public 
+    License, v. 2.0. If a copy of the MPL was not distributed with this 
+    file, You can obtain one at https://mozilla.org/MPL/2.0/.
+    `;
+  } else if (license === "Boost Software License 1.0") {
+    return `
+    Boost Software License - Version 1.0 - August 17th, 2003
+
+    Permission is hereby granted, free of charge, to any person or organization
+    obtaining a copy of the software and accompanying documentation covered by
+    this license (the "Software") to use, reproduce, display, distribute,
+    execute, and transmit the Software, and to prepare derivative works of the
+    Software, and to permit third-parties to whom the Software is furnished to
+    do so, all subject to the following:
+
+    The copyright notices in the Software and this entire statement, including
+    the above license grant, this restriction and the following disclaimer,
+    must be included in all copies of the Software, in whole or in part, and
+    all derivative works of the Software, unless such copies or derivative
+    works are solely in the form of machine-executable object code generated by
+    a source language processor.
+
+    THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+    IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+    FITNESS FOR A PARTICULAR PURPOSE, TITLE AND NON-INFRINGEMENT. IN NO EVENT
+    SHALL THE COPYRIGHT HOLDERS OR ANYONE DISTRIBUTING THE SOFTWARE BE LIABLE
+    FOR ANY DAMAGES OR OTHER LIABILITY, WHETHER IN CONTRACT, TORT OR OTHERWISE,
+    ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
+    DEALINGS IN THE SOFTWARE.
+    `;
+  } else if (license === "The Unlicense") {
+    return `
+    This is free and unencumbered software released into the public domain.
+
+    Anyone is free to copy, modify, publish, use, compile, sell, or
+    distribute this software, either in source code form or as a compiled
+    binary, for any purpose, commercial or non-commercial, and by any
+    means.
+
+    In jurisdictions that recognize copyright laws, the author or authors
+    of this software dedicate any and all copyright interest in the
+    software to the public domain. We make this dedication for the benefit
+    of the public at large and to the detriment of our heirs and
+    successors. We intend this dedication to be an overt act of
+    relinquishment in perpetuity of all present and future rights to this
+    software under copyright law.
+
+    THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
+    EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+    MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
+    IN NO EVENT SHALL THE AUTHORS BE LIABLE FOR ANY CLAIM, DAMAGES OR
+    OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE,
+    ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
+    OTHER DEALINGS IN THE SOFTWARE.
+
+    For more information, please refer to <http://unlicense.org/>
+    `;
+  }
 }
 
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(data) {
+  myName.push(data.name);
   return `
 # ${data.title}   ${renderLicenseBadge(data.licenseSlct)}
 
@@ -106,13 +204,12 @@ ${data.description}
 
 ## Table of Contents
 
-If your README is very long, add a table of contents to make it easy for users to find what they need.
-
 * [Installation](#installation)
 * [Usage](#usage)
-* [Credits](#credits)
 * [License](#license)
-
+* [Contributing](#contributing)
+* [Tests](#tests)
+* [Questions](#questions)
 
 ## Installation
 
@@ -139,7 +236,9 @@ ${data.testInstrctns}
 
 <ul>
 <li><a href="https://github.com/${data.gitName}">My GitHub Profile</a></li>
-<li><a href="mailto:${data.email}">Email Me</a>  </li>
+<li><a href="mailto:${
+    data.email
+  }">Email me with any questions you may have!</a>  </li>
 </ul>
 `;
 }

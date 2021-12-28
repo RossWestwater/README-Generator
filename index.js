@@ -8,6 +8,24 @@ const fs = require("fs")
 const questions = [
   {
     type: "input",
+    name: "name",
+    message:
+      "Please provide your name.",
+    },
+  {
+    type: "input",
+    name: "gitName",
+    message:
+      "Please provide your gitHub username.",
+    },
+    {
+    type: "input",
+    name: "email",
+    message:
+      "Please provide your email address.",
+    },
+  {
+    type: "input",
     name: "title",
     message: "Please enter the title of your project (Required).",
     validate: (titleInput) => {
@@ -39,19 +57,19 @@ const questions = [
     type: "input",
     name: "instlInstrctns",
     message:
-      "If your project has any installation instructions to include, please list them here.",
+      "Installation Instructions: If your project has any installation instructions to include, please list them here.",
   },
   {
     type: "input",
     name: "contribution",
     message:
-      "If you created an application or package and would like other developers to contribute it, enter any instructions of use for your application you would like potential contributers to adhere to. The Contributor Covenant is an industry standard, but you can always write your own.",
+      "Contributions: If you created an application or package and would like other developers to contribute it, enter any instructions of use for your application.",
   },
   {
     type: "input",
     name: "testInstrctns",
     message:
-      "Go the extra mile and write tests for your application. Then provide examples on how to run them.",
+      "Test Instructions: Go the extra mile and write tests for your application. Then provide examples on how to run them.",
   },
   {
     type: "list",
@@ -61,31 +79,18 @@ const questions = [
       "Apache License 2.0",
       "GNU GPLv3",
       "GNU AGPLv3",
-      "GNU LGPLv3",
       "MIT",
       "ISC",
       "Mozilla Public License 2.0",
       "Boost Software License 1.0",
       "The Unlicense",
-    ],
+    ]
   },
   {
     type: "input",
     name: "usgInstrctns",
-    message: "Provide instructions and examples for use.",
-  },
-  {
-  type: "input",
-  name: "gitName",
-  message:
-    "Please provide your gitHub username.",
-  },
-  {
-  type: "input",
-  name: "email",
-  message:
-    "Please provide your email address.",
-  },
+    message: "Usage Instructions: Provide instructions and examples for use.",
+  }
 ];
 
 const addScreenShot = (res) => {
